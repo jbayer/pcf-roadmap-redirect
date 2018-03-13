@@ -1,17 +1,12 @@
-# Redirect old app to new path route
+# Redirect app for the PCF Roadmap
 
-We previously hosted our blog at https://blog.starkandwayne.com but once Cloud Foundry supported path-based routes we moved it to https://www.starkandwayne.com/blog. That's great, except all the old URLs are being used/stored/documented around on the internets.
-
-This little Cloud Foundry application is now run at https://blog.starkandwayne.com and returns an HTTP redirect to the https://www.starkandwayne.com/blog/path/that/was/requested.
+This little Cloud Foundry application does a simple redirect from a vanity URL to a URL configured in the manifest.yml. Note that if the URL is a google doc, that you should append a '?' to the end or the URL may not load properly.
 
 It uses the [staticfile buildpack](https://github.com/cloudfoundry/staticfile-buildpack) to deploy a bespoke `nginx.conf`. That's it.
 
 ## Deploy
 
-To map any requests sent to `blog.yourcompany.com` to the base URL `https://www.yourcompany.com/blog`:
+Update manifest.yml to have the right URL to redirect to.
+Login as a user with access to PWS jwatters-org / staging space.
+`cf push`
 
-```
-cf push redirect-old-blog --no-start -n blog -d yourcompany.com
-cf set-env redirect-old-blog REDIRECT_URL https://www.yourcompany.com/blog
-cf start redirect-old-blog
-```
