@@ -5,6 +5,7 @@ applications:
   instances: 1
   buildpack: staticfile_buildpack
   env:
-    REDIRECT_URL: https://docs.google.com/presentation/d/1I-xqaHBMO0GAvBJX9DKnsWu35ARZtOTCum9mpLXOdhM/view?
+#    REDIRECT_URL: https://docs.google.com/presentation/d/1I-xqaHBMO0GAvBJX9DKnsWu35ARZtOTCum9mpLXOdhM/view?
+    REDIRECT_URL: https://pivotal.io
   routes:
   - route: pcfroadmap.cfapps.io
