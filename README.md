@@ -6,7 +6,8 @@ It uses the [staticfile buildpack](https://github.com/cloudfoundry/staticfile-bu
 
 ## Deploy
 
-Update manifest.yml to have the right URL to redirect to.
-Login as a user with access to PWS jwatters-org / staging space.
-`cf push`
-
+```
+# Update manifest.yml to have the right URL to redirect to.
+# Login as a user with access to PWS jwatters-org / staging space.
+cf push
+```
