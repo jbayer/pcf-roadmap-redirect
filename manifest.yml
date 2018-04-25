@@ -1,6 +1,6 @@
 ---
 applications:
-- name: pcfroadmap-redirect
+- name: pcf-roadmap-redirect
   memory: 64M
   instances: 1
   buildpack: staticfile_buildpack
