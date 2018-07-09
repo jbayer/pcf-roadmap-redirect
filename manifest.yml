@@ -5,8 +5,7 @@ applications:
   instances: 1
   buildpack: staticfile_buildpack
   env:
-#    REDIRECT_URL: https://docs.google.com/presentation/d/1I-xqaHBMO0GAvBJX9DKnsWu35ARZtOTCum9mpLXOdhM/view? # PCF 2.1
-    REDIRECT_URL: https://docs.google.com/presentation/d/1CiSSF2YfVfUy4_vdj-yeK1l9KhVKg5yiv8BLX008BAQ/edit?usp=sharing # PCF 2.2
+    REDIRECT_URL: https://docs.google.com/presentation/d/1F8-BH6wB1vaft4m0nrRf8XQ1dbVwmTKNhyWhDQmLm_c/edit?
     
   routes:
   - route: pcfroadmap.cfapps.io
